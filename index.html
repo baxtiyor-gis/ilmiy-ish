@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="KARTA NOMENKLATURASINI ANIQLASH">
+    <title>KARTA NOMENKLATURASINI ANIQLASH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link href="/assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">KARTA NOMENKLATURASINI ANIQLASH</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card py-3 mb-2">
+            <div class="card-body">
+                <h4 class="card-text">
+                    Программа перевода географических координат (система коорд. 1942 года) точки в номенклатуру листа
+                    топокарты, на которой она находится
+                </h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+
+                <div class="card p-4" style="height: 300px;">
+                    <div class="card-body">
+                        <h3 class="card-text">Koordinatalarni kriting: </h3>
+
+                    </div>
+                    <form id="form">
+                        <div class="input-div">
+                            Kenglik:
+                            <input type="number" id="lat1" min="0" max="90" value="50" required> °
+                            <input type="number" id="lat2" min="0" max="60" value="17" required> &apos;
+                            <input type="number" id="lat3" min="0" max="60" value="25" required> &quot;
+                        </div>
+
+                        <div class="input-div">
+                            Uzoqlik:
+                            <input type="number" id="long1" min="0" max="180" value="71" required> °
+                            <input type="number" id="long2" min="0" max="60" value="14" required> &apos;
+                            <input type="number" id="long3" min="0" max="60" value="10" required> &quot;
+                        </div>
+                        <div class="input-div">
+                            Masshtabni tanlang:
+                            <select id="masshtab" class="form-select" aria-label="Default select example"
+                                style="width: 50px !important; min-width: 150px; max-width: 150px; display: inline;">
+                                <option value="1">100 000</option>
+                                <option value="2">50 000</option>
+                                <option value="3">25 000</option>
+                                <option value="4">10 000</option>
+                                <option value="5">5 000</option>
+                            </select>
+                        </div>
+
+                        <div class="input-div">
+                            <button class="btn btn-primary">Hisoblash</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card p-4" style="height: 300px;">
+                    <div class="card-body">
+                        <div id="result">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card p-3 my-2">
+
+            <div class="card-body">
+                <div class="h3 card-text">
+                    Система разграфки и номенклатуры топографических карты
+                </div>
+
+            </div>
+            <div class="card-text">
+
+
+                Масштаб 1:100 000 - делением миллионного листа на 144 части ( 1, 2, 3, ..., 144 )
+                Пример: N-37-56
+                <hr>
+
+                Масштаб 1:50 000 - делением 100-тысячного листа на 4 части ( А,Б,В,Г )
+                Пример: N-37-56-А
+                <hr>
+
+                Масштаб 1:25 000 - из 50-тысячного листа, разграфкой на 4 части ( а,б,в,г )
+                Пример: N-37-56-А-в
+                <hr>
+
+                Масштаб 1:10 000 - из 25-тысячного, на 4 части ( 1,2,3,4 )
+                Пример: N-37-56-А-в-1
+                <hr>
+
+                1:5 000 - из 100-тыс-го, делением на 256 частей (16х16), с нумерацией от 1 до 256
+                Пример: N-37-56(70)
+                <hr>
+
+
+
+
+            </div>
+            <h5 class="card-text">
+                Советские карты составлялись в равноугольной проекции Гаусса-Крюгера, вычисленной по параметрам
+                референц-эллипсоида Красовского.
+            </h5>
+        </div>
+        <div class="p-4"></div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <script src="/assets/js/man.js"></script>
+</body>
+
+</html>
